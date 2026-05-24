@@ -63,7 +63,7 @@ export const leads: TripLead[] = [
     roles: [
       "Co-President, Pride",
       "Career Peer",
-      "VP, MCC",
+      "VP, Management Consulting Club",
     ],
     image: "/images/leads/tristan.jpg",
   },
