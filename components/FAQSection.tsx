@@ -6,7 +6,7 @@ import FAQAccordion from "./FAQAccordion";
 
 export default function FAQSection() {
   return (
-    <SectionWrapper id="faq" className="bg-granite-50">
+    <SectionWrapper id="faq" className="bg-cream-100">
       <div className="max-w-2xl mx-auto">
         <SectionHeader
           eyebrow="Questions"

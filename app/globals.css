@@ -2,67 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Bagel Fat One', Georgia, serif;
 }
 
 html {
   scroll-behavior: smooth;
+  background: #fffbe9;
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-body);
+  background: #fffbe9;
+  color: #1f2814;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Typography ──────────────────────────────────────────────────────────── */
 .font-display {
-  font-family: var(--font-playfair);
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
 }
 
 /* ── Smooth anchor offset for sticky nav ─────────────────────────────────── */
 [id] {
-  scroll-margin-top: 72px;
+  scroll-margin-top: 80px;
 }
 
-/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+/* ── Custom scrollbar — warm beige ───────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #fbf3d4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ced4da;
+  background: #bcc9a4;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #adb5bd;
+  background: #9bae78;
 }
 
 /* ── Selection ───────────────────────────────────────────────────────────── */
 ::selection {
-  background: #b0d9b0;
-  color: #0c2e0e;
+  background: #f6b1a0;
+  color: #1f2814;
 }
 
-/* ── Glassmorphism utility ───────────────────────────────────────────────── */
+/* ── Utilities ──────────────────────────────────────────────────────────── */
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 251, 233, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(74, 94, 44, 0.15);
   }
 
   .glass-dark {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(31, 40, 20, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 251, 233, 0.15);
+  }
+
+  /* Used for body text in places that previously used granite-600 etc.
+     Provides a deep-green readable body color on cream. */
+  .text-ink {
+    color: #2b371a;
   }
 }

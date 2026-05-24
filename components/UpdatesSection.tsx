@@ -7,7 +7,7 @@ import InfoCallout from "./InfoCallout";
 
 export default function UpdatesSection() {
   return (
-    <SectionWrapper id="updates" className="bg-white">
+    <SectionWrapper id="updates" className="bg-cream-50">
       <SectionHeader
         eyebrow="Details Coming Soon"
         title="Still Being Finalized"

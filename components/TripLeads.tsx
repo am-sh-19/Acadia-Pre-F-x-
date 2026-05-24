@@ -6,7 +6,7 @@ import LeadCard from "./LeadCard";
 
 export default function TripLeads() {
   return (
-    <SectionWrapper id="leads" className="bg-granite-50">
+    <SectionWrapper id="leads" className="bg-cream-100">
       <SectionHeader
         eyebrow="Meet the Organizers"
         title="Your Trip Leads"

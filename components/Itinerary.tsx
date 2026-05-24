@@ -7,7 +7,7 @@ import InfoCallout from "./InfoCallout";
 
 export default function Itinerary() {
   return (
-    <SectionWrapper id="itinerary" className="bg-granite-50">
+    <SectionWrapper id="itinerary" className="bg-cream-100">
       <SectionHeader
         eyebrow="Day by Day"
         title="The Weekend Plan"

@@ -3,7 +3,6 @@ import "./globals.css";
 import { trip } from "@/data/trip";
 
 // ── SEO Metadata — update before sharing publicly ─────────────────────────
-// TODO: Update the OG image path (ogImage) when you have a proper share card
 export const metadata: Metadata = {
   title: trip.metaTitle,
   description: trip.metaDescription,
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google Fonts — Playfair Display + Inter */}
+        {/* Google Fonts — Bagel Fat One (display) + DM Sans (body) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -37,12 +36,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         {/* TODO: Add a proper favicon. Place at public/favicon.ico or public/favicon.svg */}
       </head>
-      <body className="bg-white text-granite-900 antialiased">{children}</body>
+      <body className="bg-cream-50 text-forest-900 antialiased">{children}</body>
     </html>
   );
 }

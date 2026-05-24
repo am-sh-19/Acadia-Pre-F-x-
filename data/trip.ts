@@ -11,9 +11,12 @@ export const trip = {
   endDate: "September 7, 2026",
   dateRange: "Sept 4–7, 2026",
   year: 2026,
+  // 23 total: 18 first-years (+ SOs) + 5 trip leaders
+  headcount: "23",
+  headcountDetail: "18 first-years (+ SOs) and 5 trip leaders",
   // Used in meta tags — update before publishing
-  metaTitle: "Acadia Labor Day Weekend Trip",
-  metaDescription: "A student-facing guide for the Sloan Acadia Labor Day weekend trip.",
+  metaTitle: "Acadia '26 — Sloan Pre-fx",
+  metaDescription: "Acadia National Park, Labor Day weekend 2026. The trip guide for the Sloan Pre-fx student group.",
 };
 
 export const overviewHighlights = [
@@ -39,7 +42,7 @@ export const overviewHighlights = [
     id: "sunrise",
     label: "Sunrise Views",
     icon: "Sunrise",
-    description: "Optional early-morning hike to catch sunrise from Cadillac Mountain.",
+    description: "Optional early-morning drive to catch sunrise from Cadillac Mountain.",
   },
   {
     id: "dinners",

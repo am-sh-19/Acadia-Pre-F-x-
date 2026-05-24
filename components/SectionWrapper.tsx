@@ -30,7 +30,7 @@ export default function SectionWrapper({
       variants={fadeInUp}
       className={cn(
         "py-20 px-4 sm:px-6 lg:px-8",
-        dark ? "bg-granite-900 text-white" : "bg-white",
+        dark ? "bg-forest-900 text-cream-50" : "bg-cream-50 text-forest-900",
         className
       )}
     >
@@ -59,8 +59,8 @@ export function SectionHeader({
       {eyebrow && (
         <p
           className={cn(
-            "text-sm font-semibold uppercase tracking-widest mb-3",
-            light ? "text-cream-300" : "text-forest-600"
+            "text-sm font-bold uppercase tracking-widest mb-3",
+            light ? "text-sunrise-300" : "text-forest-700"
           )}
         >
           {eyebrow}
@@ -68,8 +68,8 @@ export function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight",
-          light ? "text-white" : "text-granite-900"
+          "font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95]",
+          light ? "text-sunrise-300" : "text-sunrise-400"
         )}
       >
         {title}
@@ -77,9 +77,9 @@ export function SectionHeader({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 text-lg leading-relaxed max-w-2xl",
+            "mt-5 text-lg leading-relaxed max-w-2xl font-medium",
             centered && "mx-auto",
-            light ? "text-granite-300" : "text-granite-500"
+            light ? "text-cream-200" : "text-forest-700"
           )}
         >
           {subtitle}

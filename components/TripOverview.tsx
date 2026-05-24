@@ -19,11 +19,11 @@ const iconMap: Record<string, React.ElementType> = {
 
 const cardColors = [
   "from-forest-500 to-forest-700",
-  "from-ocean-500 to-ocean-700",
-  "from-forest-600 to-emerald-700",
-  "from-sunrise-500 to-orange-600",
-  "from-amber-500 to-amber-700",
-  "from-ocean-600 to-indigo-700",
+  "from-sunrise-300 to-sunrise-500",
+  "from-ocean-400 to-ocean-600",
+  "from-sunrise-400 to-sunrise-600",
+  "from-cream-400 to-sunrise-400",
+  "from-forest-400 to-ocean-500",
 ];
 
 export default function TripOverview() {
@@ -37,7 +37,7 @@ export default function TripOverview() {
 
       {/* Main description */}
       <div className="grid lg:grid-cols-2 gap-8 mb-14">
-        <div className="space-y-4 text-granite-600 leading-relaxed">
+        <div className="space-y-4 text-forest-800 leading-relaxed">
           <p className="text-lg">
             Acadia National Park sits on the rugged Maine coast — granite peaks dropping into
             the Atlantic, carriage roads winding through old-growth forest, and some of the
@@ -45,7 +45,7 @@ export default function TripOverview() {
           </p>
           <p>
             This trip is designed with something for everyone: adventurous hikes and
-            scenic strolls, group cook-offs and dinners out, cabin games and quiet
+            scenic strolls, group cook-ups and dinners out, cabin games and quiet
             mornings, optional sunrise and mandatory good company.
           </p>
           <p>
@@ -56,11 +56,11 @@ export default function TripOverview() {
         </div>
 
         <div className="space-y-4">
-          <div className="bg-white rounded-2xl p-6 shadow-card border border-granite-100">
-            <h3 className="font-display font-bold text-granite-900 text-xl mb-3">
+          <div className="bg-cream-50 rounded-2xl p-6 shadow-card border-2 border-forest-200">
+            <h3 className="font-display text-sunrise-500 text-3xl mb-3">
               What to Expect
             </h3>
-            <ul className="space-y-2 text-granite-600">
+            <ul className="space-y-2 text-forest-800">
               {[
                 "Adventurous options and lower-key alternatives — every day",
                 "Strong community atmosphere from arrival to departure",
@@ -69,7 +69,7 @@ export default function TripOverview() {
                 "A historic Maine mansion that'll become your home base",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 text-sm">
-                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-forest-500 shrink-0" />
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-sunrise-500 shrink-0" />
                   {item}
                 </li>
               ))}
@@ -93,15 +93,15 @@ export default function TripOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-card border border-granite-100 p-5 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5"
+              className="group relative overflow-hidden rounded-2xl bg-cream-50 shadow-card border-2 border-forest-200 p-5 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-0.5"
             >
               <div
                 className={`inline-flex p-2.5 rounded-xl bg-gradient-to-br ${cardColors[i % cardColors.length]} mb-3`}
               >
-                <Icon className="w-5 h-5 text-white" />
+                <Icon className="w-5 h-5 text-cream-50" />
               </div>
-              <h3 className="font-semibold text-granite-900 text-sm mb-1">{item.label}</h3>
-              <p className="text-xs text-granite-500 leading-relaxed">{item.description}</p>
+              <h3 className="font-bold text-forest-900 text-sm mb-1">{item.label}</h3>
+              <p className="text-xs text-forest-700 leading-relaxed">{item.description}</p>
             </motion.div>
           );
         })}

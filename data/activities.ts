@@ -149,12 +149,12 @@ export const activities: Activity[] = [
     id: "group-dinners",
     title: "Group Dinners",
     description:
-      "Mix of cooking together at the house and going out to local spots. Saturday night is a cook-off; Sunday is dinner out. Every meal is a group affair.",
+      "Friday at Guerrero Maya, Saturday is a group cook-up at the house, Sunday is small group dinners at nearby restaurants, Monday breakfast cooked by the leaders. Every meal is a group affair.",
     intensity: "Group",
     intensityColor: "forest",
     icon: "UtensilsCrossed",
     tags: ["Food", "Group", "Social"],
-    highlights: ["Cook-off competition", "Local restaurant outing", "Family-style meals"],
+    highlights: ["Group cook-up at the house", "Small group dinners out", "Leader-cooked breakfast"],
     // TODO: Replace with actual group dinner photo
     image: "/images/activities/group-dinners-placeholder.jpg",
     day: "All",

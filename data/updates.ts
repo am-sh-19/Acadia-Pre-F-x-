@@ -78,13 +78,12 @@ export const updates: UpdateCard[] = [
   },
   {
     id: "airbnb-link",
-    title: "Airbnb Listing",
+    title: "Airbnb Listing — The Jarvis Homestead",
     description:
-      "The full Airbnb listing with property photos, reviews, and house details.",
+      "Confirmed: 16 beds, ★ 4.99 guest favorite, Ellsworth ME. Full Airbnb listing with photos and reviews.",
     icon: "Home",
-    status: "coming-soon",
-    // TODO: Replace "#" with actual Airbnb URL
-    link: "#",
+    status: "available",
+    link: "https://www.airbnb.com/rooms/653784188850943919?source_impression_id=p3_1779594650_P3LMuFvuVO1VFEN8",
     linkLabel: "View Listing",
   },
   {

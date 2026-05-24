@@ -6,7 +6,7 @@ import ActivityCard from "./ActivityCard";
 
 export default function Activities() {
   return (
-    <SectionWrapper id="activities" className="bg-white">
+    <SectionWrapper id="activities" className="bg-cream-50">
       <SectionHeader
         eyebrow="What We're Doing"
         title="Activities & Adventures"

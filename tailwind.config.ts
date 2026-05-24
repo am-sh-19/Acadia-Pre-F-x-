@@ -9,75 +9,87 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Acadia National Park inspired palette
-        // ─────────────────────────────────────────────
-        // Organizers: You can adjust these brand colors here
+        // ─────────────────────────────────────────────────────────────────
+        // Retro summer-camp palette: cream paper, coral pink, sage forest
+        // Token names kept stable across components; values re-themed.
+        // ─────────────────────────────────────────────────────────────────
+
+        // Sage / forest green — body text, dark sections, line art
         forest: {
-          50:  "#f0f7f0",
-          100: "#d9edd9",
-          200: "#b0d9b0",
-          300: "#7bbf7b",
-          400: "#4da04d",
-          500: "#2d7d2d",
-          600: "#1e6020",
-          700: "#184d1a",
-          800: "#123d14",
-          900: "#0c2e0e",
-          950: "#061706",
+          50:  "#eef2e8",
+          100: "#dde4d1",
+          200: "#bcc9a4",
+          300: "#9bae78",
+          400: "#7a934c",
+          500: "#5e7838",
+          600: "#4a5e2c",
+          700: "#3a4a23",
+          800: "#2b371a",
+          900: "#1f2814",
+          950: "#131a0c",
         },
-        ocean: {
-          50:  "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#2563eb",
-          600: "#1d4ed8",
-          700: "#1e3a8a",
-          800: "#1e3370",
-          900: "#172554",
-          950: "#0f172a",
-        },
-        granite: {
-          50:  "#f8f9fa",
-          100: "#e9ecef",
-          200: "#dee2e6",
-          300: "#ced4da",
-          400: "#adb5bd",
-          500: "#6c757d",
-          600: "#495057",
-          700: "#343a40",
-          800: "#212529",
-          900: "#0d0f10",
-        },
-        cream: {
-          50:  "#fefdf8",
-          100: "#fdf8ed",
-          200: "#faf0d4",
-          300: "#f5e4b0",
-          400: "#edd388",
-          500: "#e3bc5e",
-          600: "#c99e3a",
-        },
+
+        // Coral / dusty pink — headings, CTAs, decorative accents
         sunrise: {
-          50:  "#fff8f1",
-          100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
-          700: "#c2410c",
+          50:  "#fef1ec",
+          100: "#fde0d6",
+          200: "#facab9",
+          300: "#f6b1a0",
+          400: "#f29b8a",
+          500: "#e8806e",
+          600: "#d0644f",
+          700: "#a84a38",
+          800: "#7a3528",
+        },
+
+        // Cream / butter — page background, surfaces
+        cream: {
+          50:  "#fffbe9",
+          100: "#fbf3d4",
+          200: "#f7ebbe",
+          300: "#f0dd99",
+          400: "#e6c870",
+          500: "#d6ad48",
+          600: "#a8842f",
+        },
+
+        // Warm beige neutrals — muted text, borders, dividers
+        granite: {
+          50:  "#f6efd9",
+          100: "#ecdfb6",
+          200: "#d8c386",
+          300: "#b69a5d",
+          400: "#8a7341",
+          500: "#665430",
+          600: "#4a3d22",
+          700: "#352c18",
+          800: "#241d10",
+          900: "#15110a",
+        },
+
+        // Muted teal-sage — secondary accent (used sparingly)
+        ocean: {
+          50:  "#ecf1ee",
+          100: "#d2ded6",
+          200: "#a8c0b1",
+          300: "#7ea08b",
+          400: "#5a826b",
+          500: "#446753",
+          600: "#345240",
+          700: "#274032",
+          800: "#1d3025",
+          900: "#13201a",
+          950: "#0a120f",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        // Body — friendly geometric sans, looks great in regular and uppercase
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        // Display — chunky retro for big headlines
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient":
-          "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.85) 100%)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",
@@ -95,9 +107,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        card: "0 4px 24px rgba(0,0,0,0.08)",
-        "card-hover": "0 8px 40px rgba(0,0,0,0.14)",
-        glass: "0 4px 30px rgba(0,0,0,0.1)",
+        card: "0 4px 24px rgba(74, 94, 44, 0.10)",
+        "card-hover": "0 8px 40px rgba(74, 94, 44, 0.16)",
+        glass: "0 4px 30px rgba(74, 94, 44, 0.12)",
       },
     },
   },

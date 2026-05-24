@@ -37,36 +37,45 @@ export const itinerary: ItineraryDay[] = [
     accentColor: "forest",
     activities: [
       {
-        time: "Afternoon",           // TODO: Update with confirmed departure time after orientation
+        time: "All day",
         title: "Drive Up from Campus",
         description:
-          "Pile into cars and head north after orientation wraps. Groups coordinate departure timing in advance.",
+          "Pile into the four rental cars at 350 Mass Ave and head north. Drivers: Shanthini, Tristan, Amar, and Marvin.",
         tags: ["Travel", "Group"],
         icon: "Car",
       },
       {
-        time: "En Route",
+        time: "En route",
         title: "Road Trip Vibes",
         description:
-          "Car games, playlists, and the first real conversations of the trip. Good snacks encouraged.",
+          "Car games (Steph's running cow count, alphabet game), playlists, and the first real conversations of the trip.",
         tags: ["Social", "Fun"],
         icon: "Music",
       },
       {
-        time: "Evening",             // TODO: Update with confirmed dinner stop location
-        title: "Group Dinner Stop",
+        time: "~7:00 PM",
+        title: "Group Dinner at Guerrero Maya",
         description:
-          "Coordinated stop on the way to Maine for a sit-down group dinner. Location TBD.",
-        tags: ["Food", "Group"],
+          "All four cars meet up for dinner. Confirmed stop at Guerrero Maya — Shanthini's pick.",
+        tags: ["Food", "Group", "Confirmed"],
         icon: "UtensilsCrossed",
       },
       {
-        time: "Night",               // TODO: Update with confirmed arrival time
-        title: "Arrive at the Cabin",
+        time: "Night",
+        title: "Arrive at The Jarvis Homestead",
         description:
-          "Roll into the historic Ellsworth mansion, claim your space, and decompress. Snacks, drinks, house games, and a relaxed first night ahead.",
-        tags: ["Arrival", "Social", "Chill"],
+          "Roll into the historic Ellsworth mansion, claim your space, and decompress.",
+        tags: ["Arrival", "Chill"],
         icon: "Home",
+      },
+      {
+        time: "~9:00 PM",
+        title: "Light Games & Cozy Movie",
+        description:
+          "Steph leads: Wavelength, Poetry for Neanderthals, and maybe a cozy movie to wind down. Low-key first-night energy.",
+        tags: ["Social", "Chill", "Optional"],
+        icon: "Gamepad2",
+        isOptional: true,
       },
     ],
   },
@@ -81,63 +90,63 @@ export const itinerary: ItineraryDay[] = [
     accentColor: "forest",
     activities: [
       {
-        time: "Morning",             // TODO: Update with confirmed departure time for hike
+        time: "~8:00 AM",
         title: "Acadia Hike — Choose Your Adventure",
         description:
-          "Groups split by pace and intensity. Two main trail options — pick what works for you.",
+          "Tristan leads. Groups mixed across core teams, then split by pace. Two main trail options.",
         tags: ["Hiking", "Outdoors"],
         icon: "Mountain",
         difficulty: "moderate",
       },
       {
-        time: "Morning",
-        title: "Option A: Jordan Pond Loop",
+        time: "~8:00 AM",
+        title: "Option A: Jordan Pond Loop (Easy)",
         description:
-          "Scenic shoreline trail with reflective lake views and mountain backdrops. ~3.5 miles, ~2 hours. A beautiful, accessible hike for all fitness levels.",
-        tags: ["Easy–Moderate", "Scenic", "Lake Views"],
+          "Scenic shoreline trail with reflective lake views and mountain backdrops. ~3.5 miles, ~2 hours. Accessible for all fitness levels.",
+        tags: ["Easy", "Scenic", "Lake Views"],
         icon: "Waves",
         difficulty: "easy",
       },
       {
-        time: "Morning",
-        title: "Option B: Beehive Trail",
+        time: "~8:00 AM",
+        title: "Option B: Beehive Trail (Moderate)",
         description:
-          "Iron rungs, exposed cliff faces, and panoramic views over Sand Beach. ~1.5 miles but heart-pumping. For those who want an adventure.",
+          "Iron rungs bolted into exposed cliff faces with panoramic views over Sand Beach. ~1.5 miles but heart-pumping.",
         tags: ["Challenging", "Iron Rungs", "Views"],
         icon: "Zap",
         difficulty: "challenging",
       },
       {
-        time: "Midday",
+        time: "~12:30 PM",
         title: "Lunch at Sand Beach or Trailhead",
         description:
-          "Pre-packed sandwiches and snacks. Eat by the water, take in the views, enjoy the post-hike high.",
+          "Amar's pre-packed sandwiches. Eat by the water, take in the views, enjoy the post-hike high.",
         tags: ["Food", "Group"],
         icon: "Sandwich",
       },
       {
-        time: "Afternoon",
+        time: "~2:00–5:00 PM",
         title: "Return to Cabin — Rest & Recharge",
         description:
-          "Showers, naps, hammock time, or porch hang. Unwind however you need.",
+          "Showers, naps, pool, or porch hang. Unwind however you need.",
         tags: ["Chill", "Recovery"],
         icon: "BedDouble",
         difficulty: "easy",
       },
       {
-        time: "Evening",
-        title: "Group Cook-Off Dinner",
+        time: "~6:00 PM",
+        title: "Group Cook-Up Dinner",
         description:
-          "Team up and cook a meal from scratch at the house. Bragging rights included.",
-        tags: ["Food", "Group Activity", "Fun"],
+          "Amar leads cooking dinner as a group at the house. Family-style meal, everyone pitches in.",
+        tags: ["Food", "Group Activity"],
         icon: "ChefHat",
       },
       {
-        time: "Night",
-        title: "Games, Firepit & Late-Night Hang",
+        time: "~8:00 PM",
+        title: "Murder Mystery / Group Activity",
         description:
-          "Choose your adventure: firepit vibes, a movie, mystery-style group activity, or just staying up way too late.",
-        tags: ["Chill", "Social", "Optional"],
+          "Steph's evening pick — likely a murder mystery night, with the exact group activity to be determined. Late-night hang to follow.",
+        tags: ["Social", "Group", "TBD"],
         icon: "Flame",
         isOptional: true,
       },
@@ -149,61 +158,68 @@ export const itinerary: ItineraryDay[] = [
     id: "sunday",
     day: "Sunday",
     date: "September 6",
-    title: "Carriage Roads, Cabin Olympics & Coastline",
+    title: "Carriage Roads, Olympics & Coastline",
     emoji: "🚴",
     accentColor: "ocean",
     activities: [
       {
-        time: "Morning",             // TODO: Update with confirmed bike rental logistics
+        time: "~9:00 AM",
         title: "Option A: Carriage Road Bike Ride",
         description:
-          "Rent bikes and cruise Acadia's famous carriage roads — 45+ miles of car-free crushed gravel paths through old-growth forest and over stone bridges.",
-        tags: ["Biking", "Optional", "Active"],
+          "Tristan leads. Rent bikes and cruise Acadia's famous carriage roads — 45 miles of car-free crushed gravel through forest, past lakes, and over Rockefeller's stone bridges.",
+        tags: ["Biking", "Active"],
         icon: "Bike",
         difficulty: "moderate",
-        isOptional: true,
       },
       {
-        time: "Morning",
+        time: "~9:00 AM",
         title: "Option B: Ocean Path Coastal Walk",
         description:
-          "Walk the scenic oceanside path from Sand Beach to Otter Cliff. Highlights: Thunder Hole, dramatic sea spray, and Otter Cliff views. Easy, beautiful, and worth it.",
+          "Non-bikers: the 2.2 mi oceanside path from Sand Beach toward Otter Cliff. Highlights: Thunder Hole, Otter Cliff, dramatic sea spray.",
         tags: ["Walking", "Coastal", "Scenic"],
         icon: "Footprints",
         difficulty: "easy",
       },
       {
-        time: "Midday",
+        time: "~12:30 PM",
         title: "Pre-Packed Lunch",
         description:
-          "Refuel with a packed lunch at a scenic stop. Exact location TBD based on morning activity.",
+          "Amar's packed lunch at a scenic stop. Refuel before the afternoon block.",
         tags: ["Food", "Group"],
         icon: "Sandwich",
       },
       {
-        time: "Afternoon",
+        time: "~2:00 PM",
         title: "Sloan Cabin Olympics",
         description:
-          "Team-based competition with a mix of physical challenges, trivia, and creative events. Medals (and bragging rights) awarded.",
-        tags: ["Group Activity", "Competition", "Fun"],
+          "Core-team competition: cup stacking relay, blind drawing, MIT trivia, and lip sync. Medals (and bragging rights) awarded.",
+        tags: ["Group Activity", "Competition"],
         icon: "Trophy",
         difficulty: "group",
       },
       {
-        time: "Evening",
-        title: "Group Dinner Out",
+        time: "~6:00 PM",
+        title: "Small Group Dinners",
         description:
-          "Head out to a local restaurant for a shared group dinner. Location TBD — likely Bar Harbor or Ellsworth.",
-        tags: ["Food", "Group", "Out"],
+          "Split into smaller groups and head out to nearby restaurants. Easier to seat, more chances for real conversations.",
+        tags: ["Food", "Out"],
         icon: "UtensilsCrossed",
       },
       {
-        time: "Sunset",              // TODO: Confirm Bass Harbor Lighthouse visit logistics
-        title: "Bass Harbor Lighthouse",
+        time: "6:00 PM",
+        title: "Sunset at Bass Harbor Lighthouse",
         description:
-          "Golden hour at one of Maine's most iconic spots. Worth the short drive for photos, fresh air, and a perfect way to end the day.",
-        tags: ["Scenic", "Photo Op", "Optional"],
-        icon: "Lighthouse",
+          "Golden hour at one of Maine's most iconic spots. Worth the short drive for photos and fresh ocean air.",
+        tags: ["Scenic", "Photo Op"],
+        icon: "Sun",
+      },
+      {
+        time: "~9:00 PM",
+        title: "Evening Activities",
+        description:
+          "Steph's call. Firepit, games, or a quiet cabin night to recharge for sunrise.",
+        tags: ["Social", "Chill", "Optional"],
+        icon: "Flame",
         isOptional: true,
       },
     ],
@@ -214,42 +230,34 @@ export const itinerary: ItineraryDay[] = [
     id: "monday",
     day: "Monday",
     date: "September 7",
-    title: "Cadillac Sunrise & Return",
+    title: "Sunrise Send-Off",
     emoji: "🌅",
     accentColor: "sunrise",
     activities: [
       {
-        time: "Early Morning",       // TODO: Confirm Cadillac Mountain reservation/logistics
-        title: "Optional: Cadillac Mountain Sunrise",
+        time: "4:45 AM",
+        title: "Cadillac Mountain Sunrise",
         description:
-          "Rise before dawn and drive to the summit of Cadillac Mountain — the first place in the continental US to see the sunrise. Absolutely worth it.",
+          "Wake up early and drive to the summit — one of the first places in the US to see the sunrise. Vehicle reservation required (handled in advance).",
         tags: ["Optional", "Sunrise", "Iconic"],
         icon: "Sunrise",
         difficulty: "optional",
         isOptional: true,
       },
       {
-        time: "Morning",
+        time: "7:30 AM",
         title: "Group Breakfast at the House",
         description:
-          "Last meal together as a group. Relax, recap the weekend, say your goodbyes.",
-        tags: ["Food", "Group", "Chill"],
+          "Leaders cook for the group: eggs, bacon, pancakes. Last meal together — recap the weekend, say your goodbyes.",
+        tags: ["Food", "Group"],
         icon: "Coffee",
       },
       {
-        time: "Mid-Morning",         // TODO: Airbnb checkout is 10:00 AM — confirm cleanup time
-        title: "Pack Up & Clean Up",
+        time: "~10:00 AM",
+        title: "Pack Up & Drive Home",
         description:
-          "Everyone pitches in to leave the house in great shape. Checkout by 10:00 AM.",
-        tags: ["Logistics", "Group"],
-        icon: "PackageCheck",
-      },
-      {
-        time: "Late Morning",        // TODO: Update with confirmed departure time for return drive
-        title: "Drive Back to Campus",
-        description:
-          "Carpool back south. Expect good conversations, tired smiles, and maybe a final snack stop.",
-        tags: ["Travel", "Return"],
+          "Cars head back south. Expect tired smiles, good conversations, and maybe a final snack stop.",
+        tags: ["Logistics", "Travel", "Return"],
         icon: "MapPin",
       },
     ],

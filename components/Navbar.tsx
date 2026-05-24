@@ -33,8 +33,8 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-30 transition-all duration-300",
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-granite-100"
-            : "bg-transparent"
+            ? "bg-cream-50/95 backdrop-blur-md shadow-card border-b-2 border-forest-200"
+            : "bg-cream-50/40 backdrop-blur-sm"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,12 +42,9 @@ export default function Navbar() {
             {/* Logo / brand */}
             <a
               href="#hero"
-              className={cn(
-                "flex items-center gap-2 font-display font-bold text-lg transition-colors",
-                scrolled ? "text-granite-900" : "text-white"
-              )}
+              className="flex items-center gap-2 font-display text-xl text-sunrise-500 transition-colors"
             >
-              <Compass className="w-5 h-5" />
+              <Compass className="w-5 h-5 text-forest-700" />
               <span>Acadia &rsquo;26</span>
             </a>
 
@@ -57,12 +54,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={cn(
-                    "px-3 py-2 rounded-lg text-sm font-medium transition-colors",
-                    scrolled
-                      ? "text-granite-600 hover:text-granite-900 hover:bg-granite-50"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
-                  )}
+                  className="px-3 py-2 rounded-full text-sm font-semibold text-forest-800 hover:text-sunrise-600 hover:bg-cream-100 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -73,24 +65,14 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <a
                 href="#itinerary"
-                className={cn(
-                  "hidden sm:inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold transition-all",
-                  scrolled
-                    ? "bg-forest-600 text-white hover:bg-forest-700"
-                    : "bg-white/15 backdrop-blur-sm text-white border border-white/25 hover:bg-white/25"
-                )}
+                className="hidden sm:inline-flex items-center px-4 py-2 rounded-full text-sm font-bold transition-all bg-sunrise-400 text-forest-900 hover:bg-sunrise-500 shadow-card hover:-translate-y-0.5"
               >
                 View Itinerary
               </a>
 
               <button
                 onClick={() => setMobileOpen(true)}
-                className={cn(
-                  "lg:hidden p-2 rounded-lg transition-colors",
-                  scrolled
-                    ? "text-granite-700 hover:bg-granite-100"
-                    : "text-white hover:bg-white/10"
-                )}
+                className="lg:hidden p-2 rounded-lg text-forest-800 hover:bg-cream-100 transition-colors"
                 aria-label="Open menu"
               >
                 <Menu className="w-6 h-6" />

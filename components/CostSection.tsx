@@ -6,25 +6,24 @@ import {
   Trees, Trophy, CheckCircle, DollarSign, Info,
 } from "lucide-react";
 import SectionWrapper, { SectionHeader } from "./SectionWrapper";
-import InfoCallout from "./InfoCallout";
 
 // ── COST DATA — Edit amounts and line items here ──────────────────────────────
 const PRICE_PER_PERSON = "$850";
 
 const included = [
-  { icon: Home, label: "Lodging", detail: "3 nights at the Ellsworth mansion" },
+  { icon: Home, label: "Lodging", detail: "3 nights at The Jarvis Homestead" },
   { icon: Car, label: "Transportation", detail: "Group carpool from campus" },
   { icon: Fuel, label: "Gas", detail: "Fuel costs split across vehicles" },
   { icon: ShoppingCart, label: "Groceries", detail: "All house grocery runs" },
   { icon: UtensilsCrossed, label: "Group Meals", detail: "Covered dinners and group lunches" },
   { icon: Cookie, label: "Shared Snacks & Drinks", detail: "Cabin food and beverages" },
-  { icon: Trees, label: "Park Costs", detail: "Acadia entry and related fees" },
-  { icon: Trophy, label: "Group Activities", detail: "Cabin Olympics and organized events" },
+  { icon: Trees, label: "Park Costs", detail: "Acadia entry, bike rentals, Cadillac reservation" },
+  { icon: Trophy, label: "Group Activities", detail: "Cabin Olympics supplies and prizes" },
 ];
 
 export default function CostSection() {
   return (
-    <SectionWrapper id="cost" className="bg-granite-900 text-white" dark>
+    <SectionWrapper id="cost" className="bg-forest-900 text-cream-50" dark>
       <SectionHeader
         eyebrow="Cost & Coverage"
         title="What's Included"
@@ -39,19 +38,15 @@ export default function CostSection() {
         viewport={{ once: true }}
         className="flex items-center justify-center mb-10"
       >
-        <div className="relative bg-gradient-to-br from-forest-700 to-forest-900 rounded-3xl px-10 py-8 text-center border border-forest-600/50 shadow-2xl overflow-hidden">
-          {/* Glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent" />
-          <div className="relative">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <DollarSign className="w-6 h-6 text-emerald-300" />
-              <span className="text-emerald-300 text-sm font-semibold uppercase tracking-widest">
-                Per person
-              </span>
-            </div>
-            <p className="font-display font-bold text-6xl text-white">{PRICE_PER_PERSON}</p>
-            <p className="text-granite-300 text-sm mt-2">Closed-wallet structure</p>
+        <div className="relative bg-cream-50 rounded-3xl px-10 py-8 text-center border-4 border-sunrise-400 shadow-2xl">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <DollarSign className="w-6 h-6 text-sunrise-500" />
+            <span className="text-forest-700 text-sm font-bold uppercase tracking-widest">
+              Per person
+            </span>
           </div>
+          <p className="font-display text-7xl text-sunrise-500">{PRICE_PER_PERSON}</p>
+          <p className="text-forest-700 text-sm mt-2 font-semibold">Closed-wallet structure</p>
         </div>
       </motion.div>
 
@@ -66,14 +61,14 @@ export default function CostSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 transition-colors"
+              className="bg-forest-800 hover:bg-forest-700 border border-forest-700 rounded-xl p-4 transition-colors"
             >
               <div className="flex items-center gap-2 mb-2">
-                <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <Icon className="w-3.5 h-3.5 text-granite-400 shrink-0" />
+                <CheckCircle className="w-3.5 h-3.5 text-sunrise-300 shrink-0" />
+                <Icon className="w-3.5 h-3.5 text-cream-200 shrink-0" />
               </div>
-              <p className="font-semibold text-white text-sm">{item.label}</p>
-              <p className="text-granite-400 text-xs mt-0.5 leading-relaxed">{item.detail}</p>
+              <p className="font-bold text-cream-50 text-sm">{item.label}</p>
+              <p className="text-cream-200 text-xs mt-0.5 leading-relaxed">{item.detail}</p>
             </motion.div>
           );
         })}
@@ -81,16 +76,16 @@ export default function CostSection() {
 
       {/* Notes */}
       <div className="space-y-4">
-        <div className="flex items-start gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-          <Info className="w-4 h-4 text-granite-400 mt-0.5 shrink-0" />
-          <p className="text-sm text-granite-300 leading-relaxed">
+        <div className="flex items-start gap-3 p-4 bg-forest-800 border border-forest-700 rounded-xl">
+          <Info className="w-4 h-4 text-sunrise-300 mt-0.5 shrink-0" />
+          <p className="text-sm text-cream-200 leading-relaxed">
             Optional personal purchases, souvenirs, or extra snacks and drinks in town may not be covered.
             A small amount of personal spending money is recommended for Bar Harbor or optional extras.
           </p>
         </div>
-        <div className="flex items-start gap-3 p-4 bg-white/5 border border-white/10 rounded-xl">
-          <Info className="w-4 h-4 text-granite-400 mt-0.5 shrink-0" />
-          <p className="text-sm text-granite-300 leading-relaxed">
+        <div className="flex items-start gap-3 p-4 bg-forest-800 border border-forest-700 rounded-xl">
+          <Info className="w-4 h-4 text-sunrise-300 mt-0.5 shrink-0" />
+          <p className="text-sm text-cream-200 leading-relaxed">
             Any unused portion of the collected funds will be refunded after the trip is settled.
           </p>
         </div>

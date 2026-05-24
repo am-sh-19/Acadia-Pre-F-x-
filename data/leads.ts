@@ -23,8 +23,7 @@ export const leads: TripLead[] = [
       "Co-President, Sloan and Steady Run Club",
       "SVP, Entrepreneurship Club",
     ],
-    // TODO: Replace with Amar's actual headshot
-    image: "/images/leads/amar-placeholder.jpg",
+    image: "/images/leads/amar.jpg",
   },
   {
     id: "marvin",
@@ -36,8 +35,7 @@ export const leads: TripLead[] = [
       "Core Mentors",
       "Entrepreneurship & Robotics Communities",
     ],
-    // TODO: Replace with Marvin's actual headshot
-    image: "/images/leads/marvin-placeholder.jpg",
+    image: "/images/leads/marvin.jpg",
   },
   {
     id: "shanthini",
@@ -47,16 +45,14 @@ export const leads: TripLead[] = [
       "Co-President, Sloan Women in Management",
       "SVP, MIT $100K Entrepreneurship Competition",
     ],
-    // TODO: Replace with Shanthini's actual headshot
-    image: "/images/leads/shanthini-placeholder.jpg",
+    image: "/images/leads/shanthini.jpg",
   },
   {
     id: "steph",
     name: "Steph",
     bio: "Reformed investment banker and fintech strategist from Jakarta, Indonesia. Believes the best conversations happen on walk-and-talks. Loves food, word games, movies, and good company.",
     roles: [],
-    // TODO: Replace with Steph's actual headshot
-    image: "/images/leads/steph-placeholder.jpg",
+    image: "/images/leads/steph.jpg",
   },
   {
     id: "tristan",
@@ -67,7 +63,6 @@ export const leads: TripLead[] = [
       "Career Peer",
       "VP, MCC",
     ],
-    // TODO: Replace with Tristan's actual headshot
-    image: "/images/leads/tristan-placeholder.jpg",
+    image: "/images/leads/tristan.jpg",
   },
 ];

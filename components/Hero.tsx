@@ -8,31 +8,57 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cream-50"
     >
-      {/* ── Background Image ──────────────────────────────────────────────────
-          TODO: Replace with an actual Acadia scenic photo.
-          Recommended: full-bleed landscape, ~1920x1080, compressed JPG or WebP.
-          Place at: public/images/hero/acadia-hero.jpg
-          Then update the background-image style below.
-      ─────────────────────────────────────────────────────────────────────── */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          // TODO: Replace this gradient placeholder with your actual hero image:
-          // backgroundImage: "url('/images/hero/acadia-hero.jpg')",
-          backgroundImage:
-            "linear-gradient(135deg, #0c2e0e 0%, #1e3a8a 40%, #0f172a 80%, #061706 100%)",
-        }}
+      {/* ── Decorative line-art mountains (forest green strokes on cream) ── */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 800 400"
+        className="absolute top-20 right-0 w-[55%] max-w-[640px] opacity-70 text-forest-700 hidden md:block"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        {/* Cinematic overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/40 via-transparent to-ocean-950/40" />
-      </div>
+        {/* Mountains */}
+        <path d="M40 320 L160 140 L240 230 L340 90 L460 250 L560 160 L680 280 L760 200 L800 240" />
+        {/* Pine trees */}
+        <g transform="translate(120 340)">
+          <path d="M0 0 L-14 -36 L14 -36 Z" />
+          <path d="M0 -28 L-18 -64 L18 -64 Z" />
+          <path d="M0 -56 L-12 -84 L12 -84 Z" />
+          <line x1="0" y1="0" x2="0" y2="14" />
+        </g>
+        <g transform="translate(580 350)">
+          <path d="M0 0 L-12 -28 L12 -28 Z" />
+          <path d="M0 -22 L-16 -52 L16 -52 Z" />
+          <line x1="0" y1="0" x2="0" y2="12" />
+        </g>
+        {/* Sun */}
+        <circle cx="660" cy="80" r="28" />
+        <line x1="660" y1="36" x2="660" y2="20" />
+        <line x1="660" y1="124" x2="660" y2="140" />
+        <line x1="616" y1="80" x2="600" y2="80" />
+        <line x1="704" y1="80" x2="720" y2="80" />
+      </svg>
+
+      {/* ── Decorative winding road on the left ─────────────────────────── */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 200 800"
+        className="absolute -left-4 top-0 h-full w-32 opacity-60 text-forest-600 hidden lg:block"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeDasharray="2 12"
+      >
+        <path d="M40 0 C 80 120, 20 220, 80 320 S 140 540, 60 680 S 100 800, 100 800" />
+      </svg>
 
       {/* ── Content ───────────────────────────────────────────────────────── */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,32 +66,36 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="flex flex-wrap items-center gap-2 mb-6"
         >
-          <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full">
+          <span className="inline-flex items-center gap-1.5 bg-forest-700 text-cream-50 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full">
             <Users className="w-3.5 h-3.5" />
             {trip.audience}
           </span>
         </motion.div>
 
-        {/* Headline */}
+        {/* Headline — chunky coral display */}
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] tracking-tight mb-6"
+          className="font-display text-sunrise-400 text-6xl sm:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] mb-2 drop-shadow-sm"
         >
-          Labor Day Weekend
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-200 to-teal-300">
-            in Acadia
-          </span>
+          ACADIA
         </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.18 }}
+          className="font-display text-forest-700 text-3xl sm:text-4xl lg:text-5xl leading-tight mb-8"
+        >
+          Labor Day &rsquo;26
+        </motion.h2>
 
         {/* Subheadline */}
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl mb-10"
+          transition={{ duration: 0.7, delay: 0.26 }}
+          className="text-lg sm:text-xl text-forest-800 leading-relaxed max-w-2xl mb-10 font-medium"
         >
           {trip.subtitle}
         </motion.p>
@@ -74,18 +104,18 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.34 }}
           className="flex flex-wrap gap-3 mb-14"
         >
           <a
             href="#itinerary"
-            className="inline-flex items-center px-6 py-3.5 bg-forest-500 hover:bg-forest-600 text-white font-semibold rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-flex items-center px-6 py-3.5 bg-sunrise-400 hover:bg-sunrise-500 text-forest-900 font-bold rounded-full transition-all duration-200 shadow-card hover:shadow-card-hover hover:-translate-y-0.5"
           >
             View Itinerary
           </a>
           <a
             href="#packing"
-            className="inline-flex items-center px-6 py-3.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white font-semibold rounded-full border border-white/25 transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center px-6 py-3.5 bg-cream-50 hover:bg-cream-100 text-forest-800 font-bold rounded-full border-2 border-forest-700 transition-all duration-200 hover:-translate-y-0.5"
           >
             What to Pack
           </a>
@@ -95,30 +125,30 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.42 }}
           className="flex flex-wrap gap-3"
         >
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl px-4 py-3">
-            <Calendar className="w-4 h-4 text-emerald-300" />
+          <div className="flex items-center gap-2 bg-cream-50 border-2 border-forest-700 rounded-2xl px-4 py-3 shadow-card">
+            <Calendar className="w-4 h-4 text-sunrise-500" />
             <div>
-              <p className="text-white text-sm font-semibold">{trip.dateRange}</p>
-              <p className="text-white/60 text-xs">4 days, 3 nights</p>
+              <p className="text-forest-900 text-sm font-bold">{trip.dateRange}</p>
+              <p className="text-forest-600 text-xs">4 days, 3 nights</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl px-4 py-3">
-            <MapPin className="w-4 h-4 text-emerald-300" />
+          <div className="flex items-center gap-2 bg-cream-50 border-2 border-forest-700 rounded-2xl px-4 py-3 shadow-card">
+            <MapPin className="w-4 h-4 text-sunrise-500" />
             <div>
-              <p className="text-white text-sm font-semibold">Acadia National Park</p>
-              <p className="text-white/60 text-xs">Ellsworth, Maine</p>
+              <p className="text-forest-900 text-sm font-bold">Acadia National Park</p>
+              <p className="text-forest-600 text-xs">Ellsworth, Maine</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl px-4 py-3">
-            <Users className="w-4 h-4 text-emerald-300" />
+          <div className="flex items-center gap-2 bg-cream-50 border-2 border-forest-700 rounded-2xl px-4 py-3 shadow-card">
+            <Users className="w-4 h-4 text-sunrise-500" />
             <div>
-              <p className="text-white text-sm font-semibold">Sloan Pre-fx</p>
-              <p className="text-white/60 text-xs">Student trip</p>
+              <p className="text-forest-900 text-sm font-bold">{trip.headcount} People</p>
+              <p className="text-forest-600 text-xs">{trip.headcountDetail}</p>
             </div>
           </div>
         </motion.div>
@@ -131,12 +161,12 @@ export default function Hero() {
         transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
-        <span className="text-white/50 text-xs uppercase tracking-widest">Scroll</span>
+        <span className="text-forest-600 text-xs uppercase tracking-widest font-semibold">Scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <ChevronDown className="w-5 h-5 text-white/40" />
+          <ChevronDown className="w-5 h-5 text-forest-500" />
         </motion.div>
       </motion.div>
     </section>

@@ -3,55 +3,43 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const lodging = {
-  title: "Home in Ellsworth",
-  host: "Cale",
-  address: "10 East Main Street, Ellsworth, Maine",
+  title: "The Jarvis Homestead",
+  subtitle: "Historic Maine Mansion · Ellsworth",
+  address: "Ellsworth, Maine",
   checkInDate: "Friday, September 4, 2026",
   checkInTime: "4:00 PM",
   checkoutDate: "Monday, September 7, 2026",
   checkoutTime: "10:00 AM",
+  rating: "★ 4.99 · Guest favorite",
+  reservation: "HMM9MFJKXA",
 
-  // TODO: Replace with actual Airbnb listing URL
-  airbnbUrl: "#", // [ADD AIRBNB LINK HERE]
+  airbnbUrl: "https://www.airbnb.com/rooms/653784188850943919?source_impression_id=p3_1779594650_P3LMuFvuVO1VFEN8",
 
   description:
-    "A beautifully restored historic Maine mansion originally built in 1828. Multiple bedrooms and living spaces give everyone room to breathe, while shared spaces — a game room, large dining areas, and an outdoor firepit — bring everyone together. Close to Acadia and walking distance to downtown Ellsworth.",
+    "A beautifully restored historic Maine mansion just minutes from Acadia. 16 beds (max 22 guests), a private pool, and a guest-favorite Airbnb rating mean everyone has space to spread out — and shared spaces large enough for the whole group to gather.",
 
   highlights: [
-    "Historic 1828 Maine mansion, beautifully restored",
-    "Multiple bedrooms and private living spaces",
-    "Walking distance to downtown Ellsworth",
-    "Minutes from Acadia National Park",
-    "Large dining areas for group meals",
+    "16 beds across multiple rooms — max 22 guests",
+    "Historic mansion, beautifully restored",
+    "Private pool on the property",
+    "Ellsworth, Maine — minutes from Acadia National Park",
+    "★ 4.99 Airbnb guest favorite",
+    "Large dining and living areas for the full group",
   ],
 
   amenities: [
-    { label: "Bedrooms", icon: "BedDouble", value: "Multiple" },
-    { label: "Game Room", icon: "Gamepad2", value: "Included" },
+    { label: "Bedrooms", icon: "BedDouble", value: "16 beds" },
     { label: "Pool", icon: "Waves", value: "Private" },
-    { label: "Hot Tub", icon: "Flame", value: "Included" },
+    { label: "Game Room", icon: "Gamepad2", value: "Included" },
     { label: "Firepit", icon: "Flame", value: "Outdoor" },
-    { label: "Gym", icon: "Dumbbell", value: "Private" },
     { label: "Lawn Games", icon: "Trophy", value: "Included" },
     { label: "Dining", icon: "UtensilsCrossed", value: "Large area" },
     { label: "Parking", icon: "Car", value: "On-site" },
     { label: "WiFi", icon: "Wifi", value: "Included" },
   ],
 
-  // TODO: Replace placeholder paths with actual property photos
-  // Recommended: 1 hero image (landscape, ~1600x900) + 4-6 gallery images
-  images: [
-    // [ADD PROPERTY HERO IMAGE HERE] e.g. "/images/lodging/exterior.jpg"
-    "/images/lodging/hero-placeholder.jpg",
-    // [ADD GALLERY IMAGES BELOW — interior, game room, pool, firepit, etc.]
-    "/images/lodging/gallery-1-placeholder.jpg",
-    "/images/lodging/gallery-2-placeholder.jpg",
-    "/images/lodging/gallery-3-placeholder.jpg",
-    "/images/lodging/gallery-4-placeholder.jpg",
-  ],
-
   attendeeNotes: [
-    "Some students may share beds or rooms, which is common across many Pre-fx trips. We'll send an intake form beforehand to gather preferences and do our best to match everyone with a setup they're comfortable with.",
+    "Some students may share beds or rooms, which is common across Pre-fx trips. We'll send an intake form beforehand to gather preferences and do our best to match everyone with a setup they're comfortable with.",
   ],
 
   // Placeholder cards — update when details are finalized

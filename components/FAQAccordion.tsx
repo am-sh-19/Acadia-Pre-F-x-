@@ -26,10 +26,10 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
             className={cn(
-              "rounded-2xl border transition-colors duration-200",
+              "rounded-2xl border-2 transition-colors duration-200",
               isOpen
-                ? "border-forest-200 bg-forest-50"
-                : "border-granite-100 bg-white hover:border-granite-200"
+                ? "border-sunrise-400 bg-cream-50"
+                : "border-forest-200 bg-cream-50 hover:border-forest-300"
             )}
           >
             <button
@@ -39,8 +39,8 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             >
               <span
                 className={cn(
-                  "font-semibold text-base leading-snug",
-                  isOpen ? "text-forest-800" : "text-granite-900"
+                  "font-bold text-base leading-snug",
+                  isOpen ? "text-sunrise-600" : "text-forest-900"
                 )}
               >
                 {faq.question}
@@ -53,7 +53,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
                 <ChevronDown
                   className={cn(
                     "w-5 h-5 transition-colors",
-                    isOpen ? "text-forest-600" : "text-granite-400"
+                    isOpen ? "text-sunrise-500" : "text-forest-600"
                   )}
                 />
               </motion.div>
@@ -68,7 +68,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="px-5 pb-5 text-sm text-granite-600 leading-relaxed">
+                  <p className="px-5 pb-5 text-sm text-forest-800 leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>
