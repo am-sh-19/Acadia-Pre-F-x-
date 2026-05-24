@@ -23,6 +23,7 @@ export const leads: TripLead[] = [
       "Co-President, Sloan and Steady Run Club",
       "SVP, Entrepreneurship Club",
       "SVP, Product Management Club",
+      "Core Mentor",
     ],
     image: "/images/leads/amar.jpg",
   },
